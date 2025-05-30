@@ -9,9 +9,9 @@ const AppRouter = () => {
     <BrowserRouter>
     <Routes>
       <Route element={<Layout />}>
-      <Route path="/" element={<Navigate to="/loginPage" />} />
-      <Route path='/loginPage' element={<Login />} />
-      <Route path='/signupPage' element={<Login />} />
+      <Route path="/" element={<Navigate to="/yourNotes" />} />
+      {/* <Route path='/loginPage' element={<Login />} /> */}
+      {/* <Route path='/signupPage' element={<Login />} /> */}
       <Route path='/yourNotes' element={<YourNotes />} />
       </Route>
     </Routes>

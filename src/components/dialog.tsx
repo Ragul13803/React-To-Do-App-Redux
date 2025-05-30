@@ -45,7 +45,7 @@ export default function DialogBox({ open, handleClose, isEdit, title = '', descr
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="xs" fullWidth>
       <DialogTitle sx={{ bgcolor: '#F5D0B3', color: '#5C453D', fontWeight: 'bold', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 20px' }}>
-        {isEdit ? title: 'Add Notes'}
+        {isEdit ? 'Edit Note': 'Add Note'}
         <IconButton onClick={handleClose} size="small" sx={{ outline: 'none' }}>
           <CloseRoundedIcon />
         </IconButton>
@@ -53,7 +53,7 @@ export default function DialogBox({ open, handleClose, isEdit, title = '', descr
 
       <DialogContent dividers sx={{ bgcolor: '#F4F1DE' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: '12px', mt: 1 }}>
-          {!isEdit && <TextField size="small" fullWidth sx={textField} placeholder="Title" name="title" value={dialogData.title} onChange={handleInputChange} />}
+          <TextField size="small" fullWidth sx={textField} placeholder="Title" name="title" value={dialogData.title} onChange={handleInputChange} />
           <TextField size="small" fullWidth placeholder="Description" name="description" value={dialogData.description} onChange={handleInputChange} rows={6} multiline sx={textField} />
         </Box>
 

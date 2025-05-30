@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Avatar, Box, Typography } from "@mui/material"
 import { useLocation } from "react-router-dom"
 const header = () => {
   const location = useLocation()
@@ -6,16 +6,17 @@ const header = () => {
 
   return (
    <>
-      <Box style={{ background: '#A1CCD2', width: '97%', padding: '10px', position: 'absolute', top: 0, display: 'flex', justifyContent: 'space-between', }}>
-        <Box sx={{ ml: '120px'}}>
-           <Typography variant="h4" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >Keep notes</Typography>
+      <Box style={{ background: '#A1CCD2', width: '98%', padding: '10px', position: 'absolute', top: 0, display: 'flex', justifyContent: 'space-between', }}>
+        <Box sx={{ ml: '40px'}}>
+           <Typography variant="h4" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >React To-Do App</Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center', mr: '120px' }}>
+        <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center', mr: '40px' }}>
            <Typography variant="body1" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >About</Typography>
            <Typography variant="body1" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >Notes</Typography>
            <Typography variant="body1" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >Account</Typography>
            <Typography variant="body1" sx={{ cursor: 'pointer', fontWeight: 'bold' }} >Login</Typography>
+           <Avatar />
         </Box>
       </Box>
       <Box sx={{ position: 'absolute', top: 70, left: 146, display: 'flex', gap: '4px' }}>
